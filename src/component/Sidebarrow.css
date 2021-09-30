@@ -1,0 +1,17 @@
+.sidebarrow{
+    display:flex;
+    align-items: center!important;
+    padding:10px;
+    font-size: large;
+    /* border:1px solid black; */
+}
+
+.sidebarrow-icon{
+    font-size:20px !important;
+    padding: 0 5px;
+}
+
+.sidebarrow-title{
+    font-size: 13px;
+    font-weight: 500;
+}

@@ -1,0 +1,60 @@
+.Sidebar{
+    display: flex;
+    background-color:white;
+    flex-direction: column;
+    width: 200px;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    transform: translateX(-250px);
+    transition: all ease 0.3s;
+}
+
+.Sidebar.show{
+    transform: translateX(0);
+    z-index: 200;
+}
+
+.sidebar-userprofile{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    background-color:rgb(235, 235, 235);
+}
+
+.sideber-user{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid rgb(173, 173, 173);
+    padding: 10px 0;
+}
+.sideBar-Follow-wrap{
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.sideBar-Follow{
+    padding: 5px;
+    font-size: 14px; 
+    font-weight: 700;
+    color: black;
+}
+
+.sidebar-userImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin:0 10px;
+}
+
+.sidebar-userName{
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.Logout{
+    cursor: pointer;
+}
+    

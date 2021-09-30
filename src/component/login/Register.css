@@ -1,0 +1,102 @@
+.login{
+    display:flex;
+    flex-direction: column;
+    border: 1px solid rgb(174, 174, 253);
+    width:300px;
+    height: fit-content;
+    margin: auto;
+    margin-top: 120px;
+    padding:10px;
+    background-color: rgb(223, 223, 253);
+    border-radius:5px;
+}
+
+.login>div{
+    display: flex;
+    flex-direction: column;
+    flex: 1;   
+}
+
+
+.login-input{
+    margin:10px 0;
+    padding:10px;
+    border-radius: 5px;
+    border: 1px solid rgb(211, 211, 247);
+}
+
+.login-info{
+    position: relative;
+}
+
+.login-input:focus{
+    outline: none;
+}
+
+.signupbtn{
+    padding:10px;
+    font-size: 20px;
+    margin:10px 0;
+    border:none;
+    background-color: #8566aa;
+    font-weight: 600;
+    color:#ffffff;
+    border-radius: 3px;
+}
+
+.createAccount{
+    padding:10px;
+    margin:10px auto;
+    width: 200px;
+    font-size: 17px;
+    font-weight: 600;
+    background-color:rgb(41, 41, 131) ;
+    border: none;
+    color:#ffffff;
+    border-radius: 3px;
+}
+
+.login-logo{
+    margin-bottom: 30px;
+}
+.login-logo>a{
+    text-decoration: none;
+}
+.login-logo>a>h2{
+    width: 92px;
+    margin: auto;
+    border:1px solid #8566aa;
+
+}
+
+.login-logo-IN{
+    color:#8566aa;
+}
+
+.login-logo-focus{
+    background-color:#8566aa ;
+    color:#ffffff;
+}
+
+.register-errorField{
+    text-align: center;
+    font-size: 13px;
+    color: red;
+}
+.Register-password-show{
+    font-size: 13px;
+    color: gray;
+    position:absolute;
+    top: 137px;
+    right: 10px;
+    cursor: pointer;
+}
+.Register-confirmpassword-show{
+    font-size: 13px;
+    color: gray;
+    position: absolute;
+    right: 10px;
+    top: 195px;
+    cursor: pointer;
+
+}

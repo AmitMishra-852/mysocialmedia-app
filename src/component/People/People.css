@@ -1,0 +1,122 @@
+.people{
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 70px);
+}
+
+
+.people-wrap{
+    display: flex;
+    width: 1000px;
+    margin: auto;
+}
+
+
+.people-currentUser{
+    flex: 0.2;
+    border-radius: 10px;
+    margin: 10px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 10px;
+    height: 60vh;
+    background-color: white;
+    position: sticky;
+    top: 100px;
+}
+
+
+.people-container{  
+    flex: 0.8;
+    border: 1px solid rgb(211, 211, 211);
+    margin: 10px;
+    max-height: 550px;
+    min-height: 250px;
+    background-color: white;
+    overflow: auto;
+}
+
+
+.people-follows{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+}
+
+
+.currentUser-Profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color:#efe3ff;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid rgb(192, 192, 192);
+}
+
+
+.people-currentUser-img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+
+.people-currentUser-name{
+    font-size: 15px;
+    padding:5px;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.following{
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+
+.people-topbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    background-color: #efe3ff;
+    border-bottom: 1px solid rgb(189, 189, 189);
+    position: sticky;
+    top: 0;
+}
+
+
+.follows{
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    flex: 0.3;
+    cursor: pointer;
+}
+/* responsive */
+@media(max-width:550px){
+    .people-currentUser{
+       display: none;
+    }
+    .people-wrap{
+       margin-top: 0;
+       height: calc(100vh - 53px);
+       
+    }
+    .people-container{  
+        flex: 1;
+        max-height:100vh;
+        margin: 0;
+    }
+}
+
+
+

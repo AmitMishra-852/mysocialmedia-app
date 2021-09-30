@@ -1,0 +1,46 @@
+
+.usermessage{
+   display: flex;
+   flex-direction: row;
+   margin-top: 20px; 
+}
+.usermessage.own{
+   justify-content: flex-end;
+}
+
+.usermessage.own .usertext{
+   color:black;
+   background-color:#d9bbff ;
+   border-radius: 10px 10px 0 10px;  
+
+} 
+
+.chatuser-img{
+    width:32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.messages{
+    margin: 10px;
+    width:fit-content;
+    max-width: 70%;
+}
+
+.user{
+    font-size: 10px;
+    font-weight: 700;
+}
+.usertext{
+    background-color:#8566aa;
+    padding:5px;
+    font-size: 14px;
+    border-radius: 10px 10px 10px 0;  
+    color:white;
+}
+
+.messagetime{
+    font-size: 11px;
+    color:rgb(105, 105, 105);
+    font-weight: 600;
+}

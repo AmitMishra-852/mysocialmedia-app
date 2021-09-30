@@ -1,0 +1,96 @@
+.post{
+    margin:10px 0;
+    border:1px solid rgb(223, 222, 222);
+    background-color: white;
+}
+.Postwraper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom:1px solid rgb(223, 222, 222) ;
+}
+
+.post-user-info{    
+    display: flex;
+    align-items: center;
+}
+.post-user-image{
+    width:35px;
+    height:35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-user-name{
+    margin: 0 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.post-time-stamp{
+    font-size: 11px;
+    color:gray;
+}
+
+
+.postabout>p{
+    padding:8px 0;
+    margin:0 10px;
+    font-size: 15px;
+    font-family:sans-serif ;
+    font-weight: 500;
+}
+
+.postabout-image{
+    width: 100%;
+}
+
+.postlikes{
+    display:flex;
+    justify-content: space-between;
+    padding:5px ;
+}
+.postlikes>div{
+    display: flex;
+}
+.postlikes>div>label{
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+}
+.thumbicons{
+    margin: 0 10px;
+    font-size:20px!important;
+}
+.postlikes>label{
+    display: flex;
+    align-items: center;
+}
+.commenticon{
+   margin:0 5px;
+   font-size:20px!important;
+}
+.shareicon{
+   font-size:20px!important;
+}
+
+@media(max-width:500px){
+    
+    .post-user-image{
+        width:25px;
+        height:25px;
+    }
+    .post-user-name{
+        font-size: 14px;
+    }
+    .post-time-stamp{
+       font-size: 11px;
+    }
+    .post-disc{
+        font-size: 13px!important;
+        margin:2px;
+        padding:5px 0;
+    }
+
+}

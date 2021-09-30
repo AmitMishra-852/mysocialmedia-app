@@ -1,0 +1,109 @@
+.profile{
+    display: flex;
+    
+    margin: auto;
+}
+
+.profilescreen{
+    display:flex;
+    width: 900px;
+    margin: auto;
+}
+
+.profilepage{
+    flex: 0.8;
+    margin: auto;
+}
+
+
+
+.profileimg{
+    width: 15rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.edit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px!important;
+    font-weight: 700;
+    margin-top: 5px;
+    
+    padding:5px 10px;
+    background-color: rgb(221, 220, 220);
+  
+}
+
+.profileuserimg{
+    width:200px;
+    height:200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border:3px solid #ffffff;
+
+}
+
+.profileRight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 20px;
+}
+
+.profileusername{
+    font-size: 25px;
+}
+
+.profileinfo{
+    align-items: center;
+    margin-top: 15px;
+    padding: 5px 0;
+}
+
+.userInfo{
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 17px;
+    font-family: sans-serif;
+
+}
+
+.info-bold{
+    font-weight: 550;
+}
+
+.profileRightbottom{
+    display:flex;
+}
+
+@media(max-width:800px){
+    
+    .profilescreen{
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        margin-bottom:10px;  
+    }
+    .userInfo{
+       font-size: 15px;
+       padding: 2px 5px;
+       margin: 2px;
+    }
+    .profileinfo{
+        margin-top: 5px;
+        padding:5px 0;
+    }
+    .profilepage{
+        flex: 1;
+        
+    }
+}
+
+
+

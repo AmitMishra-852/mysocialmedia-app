@@ -1,0 +1,27 @@
+/* .feed-container{
+    display: flex;
+    border: 1px solid black;
+} */
+
+.Feed{
+    display: flex;
+    flex: 0.7;
+    flex-direction: column;
+    margin:0px 10px 0 10px;
+    border-radius: 5px;
+}
+
+@media(max-width:800px){
+    .Feed{
+        flex:1;
+    }
+}
+
+@media(max-width:500px){
+    .Feed{
+        margin:0;
+    }
+}
+       
+    
+

@@ -1,0 +1,193 @@
+.Righthomepage{
+    display: flex;
+    flex-direction: column;
+    flex:0.3;
+    height: fit-content;
+    padding:10px 10px 10px 15px;
+    /* border: 1px solid black; */
+
+}
+
+@media(max-width:800px){
+    .Righthomepage{
+      display: none;
+      flex:0;
+    }
+
+}
+
+/* ------------------------------------------------------------------------- */
+
+.birthdayreminder{
+    display: flex;
+    font-size:15px ;
+    font-weight: 480;   
+}
+
+.birthday-image{
+    width:35px;
+    height: 35px;
+    margin:0 10px;   
+}
+.advertising-image{
+    width:100%;
+    object-fit: contain;
+    margin:20px 0 0 10px;
+}
+
+.friendZ-list{
+    padding:0 20px ;
+    margin: 20px 0;
+    /* border: 1px solid black; */
+}
+
+.friendZ-list>p{
+    font-family: sans-serif; 
+    font-weight: 550; 
+}
+
+.friendzzlist{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10px;
+    border: 1px solid black;
+}
+
+.friendzzlist>div{
+    display: flex;
+    align-items: center;
+}
+
+.frndzprofileimg{
+    width:35px;
+    width:35px;
+    border:2px solid white;
+    border-radius:50%;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+}
+
+.frndzprofilename{
+   margin:0 10px;
+   font-weight: 500;
+   font-size: 13px;
+}
+
+.frndzprofileonline{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(24, 250, 24);
+}
+
+.friends-title{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #979797;
+
+}
+
+.friendzzUnorder{
+    padding:0 10px;
+}
+
+
+/* -------------------userFriends------------- */
+.userFriends{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.userFriends-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.userFriends-name{
+    margin: 0 10px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 550;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+.follow{
+    margin-bottom: 20px;
+}
+.follow>button{
+    padding:7px 15px;
+    background-color:#8566aa ;
+    color:white;
+    border:none;
+    font-size: 15px;
+    font-weight: 580;
+
+}
+.userInfo{
+    margin-bottom: 20px;
+}
+
+.userInfo-title{
+   font-family: sans-serif;
+   margin:10px 0;
+   font-family: sans-serif;
+   font-weight: 530;
+   font-size: larger;
+}
+
+.userdetail{
+    margin: 5px;
+}
+
+.userdetail>div{
+    padding:5px 0;
+}
+
+.userdetail>div>span{
+    font-size: 15px;
+    color:gray;
+    font-family:sans-serif;
+}
+
+/* -----------------------friends----------------------------------------------- */
+.userFrinds{
+    margin-top: 20px;
+   
+}
+
+.userFrinds>h3{
+    font-family: sans-serif;
+    font-weight: 530;
+    font-size: larger;
+}
+
+.friends{
+    display:flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    margin:5px;
+    cursor: pointer;
+
+}
+
+.userFrinds>div{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.friends>a>img{
+    width:70px;
+    border-radius: 5px;
+}
+
+.friends>p{
+   font-size:13px;
+   font-weight: 500;
+}

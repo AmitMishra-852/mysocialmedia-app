@@ -1,0 +1,73 @@
+.Followers{
+    border:1px solid rgb(189, 189, 189);
+    margin:10px 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6efff;
+    border-radius: 10px;
+}
+
+.followers-profile-img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.Followers-userName{
+    margin: 0 15px;
+    font-size: 15px;
+    font-weight:bold;
+}
+
+.Followers-wrap{
+    display: flex;
+    align-items: center;
+}
+
+
+.follow-user{
+    margin: 0 20px;
+    padding: 3px 10px;
+    background-color:#8566aa;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.followers-popup{
+    text-align: center;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    color: #a70000;
+    /* border: 1px solid black; */
+}
+
+@media(max-width:470px){
+    .Followers{
+        margin:10px 5px;
+        padding: 5px;
+      
+    }
+    .follow-user{
+        margin: 0 ;
+        padding: 3px 5px;
+        font-size: 14px;
+    
+        
+    }
+    .followers-profile-img{
+        width: 30px;
+        height: 30px;
+    }
+    .Followers-userName{
+        margin: 0 7px;
+        font-size: 13px;
+        font-weight: 550;
+    }
+}

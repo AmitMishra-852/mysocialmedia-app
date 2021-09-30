@@ -1,0 +1,136 @@
+
+.header{
+    display:flex;
+    align-items: center;
+    background-color:white;
+    justify-content:space-around;
+    position: sticky;
+    top:0;
+    left:0;
+    border-bottom:1px solid rgb(223, 222, 222);
+    height: 50px;
+    z-index: 50;
+}
+
+.header>a{
+    text-decoration: none;
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+    margin:0 10px;
+}
+
+.header-left-logo{
+    font-size: medium;
+    border: 1px solid #8566aa;
+    color:#8566aa ;
+    margin: 0 5px;
+}
+
+.logo-tube{
+  background-color: #8566aa;
+  color:white;
+  padding:0 2px;
+  margin:0 0 0 2px;
+}
+
+.header-middle{
+    display: flex;
+    flex: 0.4;
+    border:1px solid rgb(185, 185, 185);  
+}
+
+
+
+.header-middle-input{
+    width: 100%;
+    padding: 5px;
+    border:none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.header-middle-input:focus{
+    outline:none;
+}
+
+.search-icon{
+    border-left:1px solid rgb(189, 188, 188);  
+    padding:0px 2px;
+    width: 50px !important;
+    color:rgb(156, 156, 156);
+}
+
+.header-navbar{
+    display: flex;
+    align-items: center;
+}
+
+.header-menu{
+    display: none;
+    margin:0 10px;
+    color:#8566aa;
+    align-items: center;
+}
+.navber{
+    display: flex;
+    flex-direction: row;
+}
+.navber>a{
+    display: flex;
+    flex-direction: column;
+    align-items: center!important;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+.header-userprofile{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    font-weight: 600;
+}
+
+.header-userimg{
+    width:30px;
+    height:30px ;
+    border-radius: 50%;
+    margin:0 10px;
+    object-fit: cover;
+}
+
+@media(max-width:700px){
+    .header-middle{
+        display: none;
+    }
+    .header{
+        justify-content:space-between;
+    }
+}
+
+@media(max-width:500px){
+    .navber{
+        display: none;
+    }
+    .header-menu{
+        display: flex;
+    }
+    .header-userName{
+        display: none;
+    }
+}
+
+.nav-icons{
+    font-size: 22px!important;
+    margin:0 15px 0 15px ;
+    /* border: 1px solid black; */
+    
+}
+.nav{
+    font-size: 13px;
+    font-weight: 600;
+}

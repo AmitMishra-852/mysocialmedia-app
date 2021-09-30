@@ -1,0 +1,29 @@
+
+.chatOnlineFriends{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    position: relative;
+}
+
+.onlinesign{
+    width:10px;
+    height: 10px;
+    position: absolute;
+    top:2px;
+    left: 30px;
+    background-color: limegreen;
+    border-radius: 50%;
+}
+
+.userImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.username{
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}

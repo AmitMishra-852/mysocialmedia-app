@@ -1,0 +1,113 @@
+
+.messenger{
+    display: flex;
+    height: calc(100vh - 150px);
+    border: 1px solid rgb(218, 218, 218);
+    max-width: 900px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.chafrnds{
+    flex:0.3;
+    background-color:white;
+    overflow-y: auto;
+    border-right:1px solid #dfdfdf ;
+}
+
+.chat-currentUser{
+    border-bottom: 1px solid rgb(218, 218, 218);
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+.chat-current-userImg{
+    width:40px;
+    height:40px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.chat-current-userName{
+    font-size: 20px;
+    margin: 0 15px;
+    font-weight: 600;
+}
+
+.chafrnds::-webkit-scrollbar{
+    width: 5px; 
+}
+.chafrnds::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 20px;
+}
+
+.chatfrnd-list-input{
+    width:90%;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom:1px solid rgb(172, 172, 172) ;
+}
+
+.chatfrnd-list-input:focus{
+    outline: none;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex:0.7;
+    background-color:white;
+    position: relative;
+}
+
+.noChatMsg{
+    position: absolute;
+    top:5rem;
+    left: 5rem;
+    font-size: 2rem;
+    color: rgb(204, 203, 203);
+}
+
+.messagebox{
+    overflow-y: auto;
+}
+.messagebox::-webkit-scrollbar{
+    width:5px;
+}
+.messagebox::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 40px;
+}
+
+.online-frnds{
+    flex:0.3;
+    background-color:white;
+    border-left:1px solid #dfdfdf ;
+
+
+}
+.chatboxbottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatbox{
+    margin:5px 10px;
+    width: 80%;
+    overflow-y: auto;
+    height: 90px;
+    padding:5px;
+}
+
+.sendButton{
+    height:fit-content;
+    padding: 10px 15px;
+    background-color: #8566aa;
+    border: none;
+    border-radius: 5px;
+    color:white;
+    font-weight: 600;
+}
