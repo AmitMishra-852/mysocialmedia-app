@@ -10,7 +10,6 @@ function Followers({ follower }) {
     const { user, dispatch } = StateHandler()
     const [followed , setFollowed] = useState(user.following.includes(follower._id))
     console.log("user",user)
-    console.log("followers id",follower._id)
 
 
 
@@ -42,6 +41,7 @@ function Followers({ follower }) {
     }
 
     console.log(followed)
+    console.log("followers id",follower._id)
 
     return (
         <>

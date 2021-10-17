@@ -56,7 +56,7 @@ const ReducerFunc=(state,action)=>{
             }  
         case "UNFOLLOW":
             return{
-                ...state,user:{...state.user,following:state.user.following.filter((followerUserId)=>followerUserId === action.payLoad)}
+                ...state,user:{...state.user,following:state.user.following.filter((followerUserId)=>followerUserId !== action.payLoad)}
             }  
         case "LOGOUT-USER":
             return{

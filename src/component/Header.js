@@ -3,7 +3,7 @@ import "./Header.css";
 import MenuIcon from '@material-ui/icons/Menu';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import PeopleAltOutlinedIcon from '@material-ui/icons/PeopleAltOutlined';
-import { Link, useHistory } from "react-router-dom";
+import {NavLink,Link , useHistory } from "react-router-dom";
 import { StateHandler } from "./login/context/Authcontext";
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 // import LockCloseIcon from '@material-ui/icons/LockClose';
@@ -35,16 +35,17 @@ function Header({ click }) {
             </div>
             <div className="header-navbar">
                 <div className="navber">
-                    <Link to="/" style={{ textDecoration: "none", color: "black" }}>
-                        <HomeOutlinedIcon className="nav-icons" />
-                    </Link>
-                    <Link to="/People" style={{ textDecoration: "none", color: "black" }}>
-                        <PeopleAltOutlinedIcon className="nav-icons" />
-                    </Link>
-                    <Link to="/Login" style={{ textDecoration: "none", color: "black" }}>
-                        <LockOpenIcon className="nav-icons nav" onClick={logoutHandler} />
-                    </Link>
+                    <NavLink exact activeClassName="active" to="/" style={{ textDecoration: "none", color: "black" }}>
+                        <abbr title="Home"><HomeOutlinedIcon className="nav-icons" /></abbr>
+                    </NavLink>
+                    <NavLink exact activeClassName="active" to="/people" style={{ textDecoration: "none", color: "black" }}>
+                        <abbr title="people"><PeopleAltOutlinedIcon className="nav-icons" /></abbr>
+                    </NavLink>
+                    <NavLink exact activeClassName="active" to="/login" style={{ textDecoration: "none", color: "black" }}>
+                        <abbr title="Logout"><LockOpenIcon className="nav-icons nav" onClick={logoutHandler} /></abbr>
+                    </NavLink>
                 </div>
+
                 <Link to={`/profile/${user?.userName}`} className="header-userprofile">
                     <p className="header-userName">{user?.userName}</p>
                     <img
@@ -53,6 +54,7 @@ function Header({ click }) {
                         alt=""
                     />
                 </Link>
+        
 
             </div>
 

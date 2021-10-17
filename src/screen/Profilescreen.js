@@ -5,37 +5,62 @@ import { useParams } from "react-router"
 import Righthomepage from "../component/Righthomepage";
 import Header from '../component/Header';
 import axios from "axios";
-import {Link} from "react-router-dom" ;
+import { StateHandler } from "../component/login/context/Authcontext";
+import { Link } from "react-router-dom";
 
 
 
 function Profilescreen({ click }) {
-
     const { userName } = useParams();
+    const { user: currentUser, dispatch } = StateHandler()
+    const [profileUser, setProfileUser] = useState({});
+    console.log("user", currentUser.following)
+    console.log("profile-user", profileUser?._id)
+    const [profilePost, setProfilePost] = useState([]);
+    // const [followed, setFollowed] = useState(currentUser.following.includes(profileUser._id))
+    // console.log("followed", followed)
 
-    const [User, setUser] = useState();
-    console.log("user",User)
-    const [profilePost, setProfilePost] = useState();
-    // const [imageFile, setImageFile] = useState(null)
-    // console.log(imageFile)
+
 
     useEffect(() => {
         const profileUserFunc = async () => {
             const getUserProfile = await axios.get(`https://mediaAppBackend.jerryroy.repl.co/api/user?userName=${userName}`)
-            setUser(getUserProfile.data)
-            // console.log(getUserProfile.data)
+            setProfileUser(getUserProfile.data)
+            console.log("profileUser", getUserProfile.data)
         }
-        profileUserFunc()
+            profileUserFunc()
     }, [userName])
 
     useEffect(() => {
         const getAllPost = async () => {
-            const res = await axios.get(`https://mediaAppBackend.jerryroy.repl.co/api/post/profile/${User?.userName}`)
+            const res = await axios.get(`https://mediaAppBackend.jerryroy.repl.co/api/post/profile/${profileUser?.userName}`)
             setProfilePost(res.data.userAllPost)
         }
         getAllPost()
-    }, [User?.userName])
+    }, [profileUser?.userName])
 
+    
+    
+    // const followUserHandler=async()=>{
+    //     if (followed) {
+    //         try {
+    //             const unfollow = await axios.put(`https://mediaAppBackend.jerryroy.repl.co/api/user/${profileUser._id}/unfollow`, { userId: currentUser._id })
+    //             console.log(unfollow)
+    //             dispatch({ type: "UNFOLLOW", payLoad: profileUser._id })
+    //         } catch (err) {
+    //             console.log(err)
+    //         }
+    //     } else {
+    //         try {
+    //             const follow = await axios.put(`https://mediaAppBackend.jerryroy.repl.co/api/user/${profileUser._id}/follow`, { userId: currentUser._id })
+    //             console.log(follow)
+    //             dispatch({ type: "FOLLOW", payLoad: profileUser._id })
+    //         } catch (err) {
+    //             console.log(err)
+    //         }
+    //     }
+    //     setFollowed(!followed)
+    // }
 
     return (
         <>
@@ -47,24 +72,28 @@ function Profilescreen({ click }) {
                             <Link to="/edit">
                                 <img
                                     className="profileuserimg"
-                                    src={User?.profilePicture || "https://image.flaticon.com/icons/png/512/709/709699.png"}
+                                    src={profileUser?.profilePicture || "https://image.flaticon.com/icons/png/512/709/709699.png"}
                                     alt=""
                                 />
                             </Link>
                         </div>
                         <div className="profileRight">
-                            <p className="profileusername">{User?.userName}</p>
+                            <p className="profileusername">{profileUser && profileUser?.userName}</p>
                             <div className="profileinfo">
                                 <span className="userInfo"><span className="info-bold">{profilePost?.length}</span> post</span>
-
-                                <span className="userInfo"><span className="info-bold">{User?.followers.length}</span> followers</span>
-                                <span className="userInfo"><span className="info-bold">{User?.following.length}</span> following</span>
+                                <span className="userInfo"><span className="info-bold">{profileUser.followers?.length}</span> followers</span>
+                                <span className="userInfo"><span className="info-bold">{profileUser.following?.length}</span> following</span>
                             </div>
+                            {/* {
+                                userName !== currentUser.userName && (
+                                    <button className="followbtn" onClick={followUserHandler}>{followed ? "unFollow" : "Follow"}</button>
+                                )
+                            } */}
                         </div>
                     </div>
                     <div className="profileRightbottom">
-                        <Feed key={User?._id} username={User?.userName} />
-                        <Righthomepage User={User} />
+                        <Feed key={profileUser?._id} username={profileUser?.userName}/>
+                        <Righthomepage User={profileUser}/>
                     </div>
                 </div>
 

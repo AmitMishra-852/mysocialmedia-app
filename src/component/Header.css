@@ -84,6 +84,7 @@
     align-items: center!important;
     justify-content: center;
     /* border: 1px solid black; */
+    padding: 10px 0 10px 0;
 }
 
 .header-userprofile{
@@ -93,6 +94,8 @@
     font-size: 15px;
     color: black;
     font-weight: 600;
+    /* border: 1px solid black; */
+    padding: 9px 0 9px 0;
 }
 
 .header-userimg{
@@ -127,8 +130,14 @@
 .nav-icons{
     font-size: 22px!important;
     margin:0 15px 0 15px ;
-    /* border: 1px solid black; */
-    
+    /* padding:15px 0px 15px 0; */
+    /* border-radius: 50%;   */
+    /* border: 1px solid black;  */
+}
+.navber>a.active{
+    border-bottom:3px solid #8566aa ;
+    color: #8566aa;
+    /* background-color: rgb(202, 202, 202); */
 }
 .nav{
     font-size: 13px;

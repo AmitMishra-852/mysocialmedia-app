@@ -51,9 +51,10 @@
 .profileRight{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     margin: 10px 20px;
+    /* border: 1px solid black; */
 }
 
 .profileusername{
@@ -61,14 +62,15 @@
 }
 
 .profileinfo{
-    align-items: center;
+    /* align-items: center; */
     margin-top: 15px;
     padding: 5px 0;
+    /* border: 1px solid black; */
 }
 
 .userInfo{
-    padding: 5px 10px;
-    margin: 0 5px;
+    padding: 10px 0px;
+    margin: 0 20px 0 0;
     font-size: 17px;
     font-family: sans-serif;
 
@@ -81,6 +83,31 @@
 .profileRightbottom{
     display:flex;
 }
+
+.profile-followbtn{
+    margin-top: 15px;
+    padding: 5px;
+    font-size: 20px;
+    background-color:#8566aa ;
+    color:white;
+    border:none;
+}
+
+/* .follow{
+    margin-top: 15px;
+} */
+.followbtn{
+    padding:7px 15px;
+    background-color:#8566aa ;
+    color:white;
+    border:none;
+    font-size: 15px;
+    width: 100%;
+    font-weight: 580;
+    margin-top: 15px;
+    border-radius: 5px;
+
+} 
 
 @media(max-width:800px){
     

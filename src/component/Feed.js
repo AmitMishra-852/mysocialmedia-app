@@ -12,34 +12,39 @@ function Feed({ username }) {
 
 
     const [posts, setPost] = useState([])
-    
+
     useEffect(() => {
         const getPostFunc = async () => {
             if (username) {
                 const getData = await axios.get(`https://mediaAppBackend.jerryroy.repl.co/api/post/profile/${username}`)
-                setPost(getData?.data.userAllPost)
-            } else if (user) {
+                setPost(
+                    getData?.data.userAllPost.sort((p1, p2) => {
+                        return new Date(p2.createdAt) - new Date(p1.createdAt)
+                    })
+                );
+
+            } else if(user){
                 const getData = await axios.get(`https://mediaAppBackend.jerryroy.repl.co/api/post/timeline/${user?._id}`)
                 setPost(
-                    getData?.data.sort((p1 ,p2)=>{
+                    getData?.data.sort((p1, p2) => {
                         return new Date(p2.createdAt) - new Date(p1.createdAt)
-                    })  
+                    })
                 );
             }
         }
         getPostFunc();
     }, [username, user])
 
-    console.log("post",posts)
+    console.log("post", posts)
 
     return (
-      
-            <div className="Feed">
-                {(!username || username === user.userName) && <Share />}
-                {
-                    posts && posts.map((items) => <Post id={items?._id} post={items} />)
-                }
-            </div>
+
+        <div className="Feed">
+            {(!username || username === user.userName) && <Share />}
+            {
+                posts && posts.map((items) => <Post id={items?._id} post={items} />)
+            }
+        </div>
 
     )
 }

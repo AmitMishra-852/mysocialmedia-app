@@ -59,11 +59,8 @@ function People({ click, show }) {
         getAllUser()
     }, [])
 
-
-
-
-
-  console.log(user.following)
+  console.log("following",followingUsers.length)
+  console.log("follower",followersFriends.length)
 
     return (
         <>

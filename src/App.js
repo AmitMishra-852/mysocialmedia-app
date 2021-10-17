@@ -33,13 +33,13 @@ function App() {
           <Route path="/message" >
             <Messenger click={() => setToggle(true)} show={toggle} />
           </Route>
-          <Route exact path="/Login">
+          <Route exact path="/login">
             {user ? <Redirect to="/" /> : <Login />}
           </Route>
-          <Route exact path="/People">
+          <Route exact path="/people">
             <People click={() => setToggle(true)} show={toggle} />
           </Route>
-          <Route exact path="/Register" >
+          <Route exact path="/register" >
             {user ? <Redirect to="/" /> : <Register />}
           </Route>
           <Route exact path="/edit" >

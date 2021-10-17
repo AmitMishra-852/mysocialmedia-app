@@ -14,7 +14,9 @@ function Post({ post }) {
     const { user: currentUser } = StateHandler()
 
     const [User, setUser] = useState({})
-    // console.log(User)
+    console.log(currentUser._id)
+    console.log(Like)
+    // console.log(post._id)
 
 
     useEffect(() => {
@@ -67,9 +69,10 @@ function Post({ post }) {
                 </div>
                 <div className="postlikes">
                     <div>
-                        <label onClick={LikeHandler}><ThumbUpAltIcon className="thumbicons" />{Like.length}</label>
+                        <label onClick={LikeHandler}>{Like.includes(currentUser._id) ? <ThumbUpAltIcon htmlColor="#8566aa" className="thumbicons" />:<ThumbUpAltIcon className="thumbicons" />}{Like.length}</label>
                     </div>
                 </div>
+                {/* <div className="post-comment">comment</div> */}
             </div>) : <div> 0 Post</div>
         }
         </>
