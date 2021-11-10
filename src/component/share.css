@@ -68,6 +68,10 @@
     padding: 5px;
 }
 
+.submit-image:hover{
+   background-color: gray;
+}
+
 .share-image{
   margin:0 10px;
   width: 50px;

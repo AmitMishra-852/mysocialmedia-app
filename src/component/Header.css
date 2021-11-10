@@ -30,10 +30,10 @@
 }
 
 .logo-tube{
-  background-color: #8566aa;
-  color:white;
-  padding:0 2px;
-  margin:0 0 0 2px;
+    background-color: #8566aa;
+    color:white;
+    padding:0 2px;
+    margin:0 0 0 2px;
 }
 
 .header-middle{
@@ -41,8 +41,6 @@
     flex: 0.4;
     border:1px solid rgb(185, 185, 185);  
 }
-
-
 
 .header-middle-input{
     width: 100%;

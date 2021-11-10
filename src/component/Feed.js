@@ -12,6 +12,7 @@ function Feed({ username }) {
 
 
     const [posts, setPost] = useState([])
+    console.log("posts",posts)
 
     useEffect(() => {
         const getPostFunc = async () => {
@@ -40,7 +41,7 @@ function Feed({ username }) {
     return (
 
         <div className="Feed">
-            {(!username || username === user.userName) && <Share />}
+            {(!username || username === user.userName) && <Share setPost={setPost}/>}
             {
                 posts && posts.map((items) => <Post id={items?._id} post={items} />)
             }

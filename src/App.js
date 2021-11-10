@@ -13,6 +13,7 @@ import People from "./component/People/People";
 import EditProfile from "./component/EditProfile";
 
 
+
 function App() {
 
   const [toggle, setToggle] = useState(false);

@@ -30,7 +30,7 @@ function Following({following}) {
             {popup && <div className="following-popup">{popup}</div>}
             <div className="followings">
                  <div className="followings-wrap" >
-                     <Link to={`/profile/${user.userName}`}>
+                     <Link to={`/profile/${following.userName}`}>
                         <img
                             className="followings-profile-img"
                             src={following.profilePicture || "https://image.flaticon.com/icons/png/512/709/709699.png"}
