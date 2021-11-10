@@ -15,7 +15,6 @@ function Profilescreen({ click }) {
     // const { user: currentUser, dispatch } = StateHandler()
     const [profileUser, setProfileUser] = useState({});
     const [profilePost, setProfilePost] = useState([]);
-    console.log(followed)
   
 
 
